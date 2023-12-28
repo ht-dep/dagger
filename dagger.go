@@ -180,6 +180,7 @@ func (n *GraphNode[T]) SetEdge(relationship string, toNode Node, metadata map[st
 		metadata: metadata,
 		from:     n,
 		to:       to,
+		relationship: relationship,
 	}
 	n.graph.edges.Set(e.ID(), e)
 	to.edgesTo.Set(e.ID(), e)
